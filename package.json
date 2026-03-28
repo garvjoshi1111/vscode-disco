@@ -1,0 +1,58 @@
+{
+  "name": "ai-slop-disco",
+  "displayName": "AI Slop Disco 🪩",
+  "description": "Turns VS Code into a full disco. Rainbow UI, spinning ball, 11 generated music tracks. For when you've given up pretending to be productive.",
+  "version": "2.0.0",
+  "publisher": "garvjoshi1111",
+  "engines": { "vscode": "^1.85.0" },
+  "categories": ["Other", "Themes"],
+  "keywords": ["disco", "fun", "music", "party", "theme", "colors", "rainbow", "animation"],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "icon": "media/icon.png",
+  "galleryBanner": {
+    "color": "#0d0010",
+    "theme": "dark"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "ai-slop-disco.toggle",
+        "title": "Disco: Party Mode 🪩",
+        "category": "Disco"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "ai-slop-disco.toggle",
+        "key": "ctrl+shift+d",
+        "mac": "cmd+shift+d"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "node esbuild.js",
+    "watch": "node esbuild.js --watch",
+    "package": "npm run build && vsce package",
+    "publish": "npm run build && vsce publish",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vscode/vsce": "^3.0.0",
+    "esbuild": "^0.20.0",
+    "eslint": "^8.0.0",
+    "typescript": "^5.3.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/garvjoshi1111/vscode-disco"
+  },
+  "bugs": {
+    "url": "https://github.com/garvjoshi1111/vscode-disco/issues"
+  },
+  "homepage": "https://github.com/garvjoshi1111/vscode-disco#readme"
+}
